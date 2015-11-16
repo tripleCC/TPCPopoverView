@@ -12,6 +12,8 @@
 		D60641461BF97597001970F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D60641441BF97597001970F0 /* Main.storyboard */; };
 		D60641481BF97597001970F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60641471BF97597001970F0 /* Assets.xcassets */; };
 		D606414B1BF97597001970F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D60641491BF97597001970F0 /* LaunchScreen.storyboard */; };
+		D680EFB31BF9E9E600D80445 /* TPCPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680EFB21BF9E9E600D80445 /* TPCPopoverView.swift */; };
+		D680EFB71BF9EA2000D80445 /* TPCPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D680EFB61BF9EA2000D80445 /* TPCPopView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		D60641471BF97597001970F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D606414A1BF97597001970F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D606414C1BF97597001970F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D680EFB21BF9E9E600D80445 /* TPCPopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPCPopoverView.swift; sourceTree = "<group>"; };
+		D680EFB51BF9EA2000D80445 /* TPCPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCPopView.h; sourceTree = "<group>"; };
+		D680EFB61BF9EA2000D80445 /* TPCPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCPopView.m; sourceTree = "<group>"; };
+		D680EFBB1BF9EBD600D80445 /* BridginfHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridginfHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,34 @@
 		D606413F1BF97597001970F0 /* TPCPopoverView */ = {
 			isa = PBXGroup;
 			children = (
+				D680EFB11BF9E9E600D80445 /* TPCPopoverViewSwift */,
+				D680EFB41BF9EA2000D80445 /* TPCPopViewObjectiveC */,
 				D60641401BF97597001970F0 /* AppDelegate.swift */,
 				D60641421BF97597001970F0 /* ViewController.swift */,
+				D680EFBB1BF9EBD600D80445 /* BridginfHeader.h */,
 				D60641441BF97597001970F0 /* Main.storyboard */,
 				D60641471BF97597001970F0 /* Assets.xcassets */,
 				D60641491BF97597001970F0 /* LaunchScreen.storyboard */,
 				D606414C1BF97597001970F0 /* Info.plist */,
 			);
 			path = TPCPopoverView;
+			sourceTree = "<group>";
+		};
+		D680EFB11BF9E9E600D80445 /* TPCPopoverViewSwift */ = {
+			isa = PBXGroup;
+			children = (
+				D680EFB21BF9E9E600D80445 /* TPCPopoverView.swift */,
+			);
+			path = TPCPopoverViewSwift;
+			sourceTree = "<group>";
+		};
+		D680EFB41BF9EA2000D80445 /* TPCPopViewObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				D680EFB51BF9EA2000D80445 /* TPCPopView.h */,
+				D680EFB61BF9EA2000D80445 /* TPCPopView.m */,
+			);
+			path = TPCPopViewObjectiveC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D680EFB71BF9EA2000D80445 /* TPCPopView.m in Sources */,
+				D680EFB31BF9E9E600D80445 /* TPCPopoverView.swift in Sources */,
 				D60641431BF97597001970F0 /* ViewController.swift in Sources */,
 				D60641411BF97597001970F0 /* AppDelegate.swift in Sources */,
 			);
@@ -251,6 +279,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.TPCPopoverView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = TPCPopoverView/BridginfHeader.h;
 			};
 			name = Debug;
 		};
@@ -262,6 +291,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.TPCPopoverView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = TPCPopoverView/BridginfHeader.h;
 			};
 			name = Release;
 		};
@@ -284,6 +314,7 @@
 				D60641511BF97597001970F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
