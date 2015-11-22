@@ -220,6 +220,7 @@ extension TPCPopoverView {
         popoverView.dataSource = dataSource
         UIApplication.sharedApplication().keyWindow?.addSubview(popoverView)
         popoverView.alpha = 0
+        popoverView.containerView.transform = CGAffineTransformMakeScale(0, 0)
         UIView.animateWithDuration(0.2) { () -> Void in
             popoverView.alpha = 1.0
             popoverView.containerView.transform = CGAffineTransformIdentity
