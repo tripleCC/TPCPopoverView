@@ -15,4 +15,4 @@ You can use the following methods :<br>
 }];
 ```
 
-![](README.md/2015-10-27 18_40_18.gif)
+![](2015-10-27 18_40_18.gif)
